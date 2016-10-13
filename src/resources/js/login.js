@@ -1,6 +1,6 @@
-if (localStorage.auth_failed) {
+if (localStorage.authFailed) {
     document.getElementById('auth-failed').style.display = 'block';
-    delete localStorage.auth_failed;
+    localStorage.removeItem('authFailed');
 }
 
 document.getElementById('login-form').addEventListener('submit', function (e) {

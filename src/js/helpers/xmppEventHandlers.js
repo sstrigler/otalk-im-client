@@ -109,7 +109,7 @@ module.exports = function (client, app) {
 
     client.on('auth:failed', function () {
         log.warn('auth failed');
-        localStorage.auth_failed = 1;
+        localStorage.authFailed = true;
         window.location = 'login.html';
     });
 
