@@ -35,6 +35,7 @@ module.exports = HumanModel.define({
         lastInteraction: 'date',
         lastSentMessage: 'object',
         unreadCount: ['number', false, 0],
+        unreadHlCount: ['number', false, 0],
         persistent: ['bool', false, false],
         joined: ['bool', true, false],
         membersCount: ['number', false, 0],
@@ -122,6 +123,7 @@ module.exports = HumanModel.define({
         if (notify && (!this.activeContact || (this.activeContact && !app.state.focused)) && !mine) {
             this.unreadCount++;
             if (toMe) {
+                this.unreadHlCount += 1;
                 app.notifications.create(this.displayName, {
                     body: message.body,
                     icon: this.avatar,
