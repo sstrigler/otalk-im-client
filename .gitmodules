@@ -1,0 +1,4 @@
+[submodule "kaiwa"]
+	path = kaiwa
+	url = https://github.com/sstrigler/otalk-im-client.git
+	branch = kaiwa
