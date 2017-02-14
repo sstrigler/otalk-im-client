@@ -12,4 +12,6 @@ services:
       - bosh
     ports:
       - 8000:8000
+    volumes:
+      - ./dev_config.json:/usr/src/app/dev_config.json:ro
     restart: always
