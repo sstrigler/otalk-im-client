@@ -11,8 +11,7 @@ RUN npm install
 
 # Bundle app source
 COPY kaiwa /usr/src/app
-
-RUN npm run compile
+COPY entrypoint.sh /
 
 EXPOSE 8000
-CMD [ "npm", "start" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
