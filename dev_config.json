@@ -1,0 +1,24 @@
+{
+    "isDev": true,
+    "http": {
+        "baseUrl": "https://jwchat.org",
+        "port": 8000
+    },
+    "session": {
+        "secret": "DecCKYoUer6dgK2BwyndnkuOD6?"
+    },
+    "server": {
+        "name": "jwchat.org",
+        "domain": "jwchat.org",
+        "wss": "https://jwchat.org/http-bind/",
+        "sasl": "scram-sha-1",
+        "securePasswordStorage": true,
+        "muc": "conference.jwchat.org",
+        "startup": "groupchat/lobby%40conference.jwchat.org",
+        "admin": "zeank@jwchat.org",
+        "keepalive": {
+            "interval": 45,
+            "timeout": 15
+        }
+    }
+}
